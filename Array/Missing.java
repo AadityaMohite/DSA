@@ -60,7 +60,7 @@ public class Missing {
 
             xor2 = xor2^n;
 
-            int result = xor1 - xor2;
+            int result = xor1 ^ xor2;
 
            System.out.println("Missing Number is : "+result);
 
