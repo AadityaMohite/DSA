@@ -27,7 +27,7 @@ public class LongestSubarray {
 
 
 
-    
+
     // Better approach
 
     public static int Longest2(int[] arr, int k) {
@@ -60,6 +60,35 @@ public class LongestSubarray {
         return maxlength;
     }
 
+    // Optimal Approach for the Positives only 
+
+    public static int Longest3(int[] arr, int k){
+
+       
+         int left = 0;
+         int sum = 0;
+         int maxlength = 0;
+      
+
+          for(int right = 0; right<arr.length; right++){
+                 sum += arr[right];
+                 
+                 while(left<=right && sum>k){
+                     sum -= arr[left];
+                     left++;
+                 }
+
+               if(sum == k ){
+                 maxlength = Math.max(maxlength, right-left+1);
+               }
+
+          }
+
+
+
+        return maxlength;
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -76,7 +105,7 @@ public class LongestSubarray {
 
         int k = sc.nextInt();
 
-        int result = Longest2(arr, k);
+        int result = Longest3(arr, k);
 
         System.out.println("Longest Sub array is : " + result);
 
