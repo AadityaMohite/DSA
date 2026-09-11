@@ -30,6 +30,11 @@ public class Deletionat_End {
     }
 
     public static Node Deletion_from_End(Node head) {
+
+        if (head == null || head.next == null) {
+            return null;
+        }
+
         Node temp = head;
 
         while (temp.next.next != null) {
@@ -43,7 +48,7 @@ public class Deletionat_End {
 
     public static void main(String[] args) {
 
-        int arr[] = { 12, 23, 34, 45, 56 };
+        int arr[] = { 12 ,23,34};
 
         Node head = changearrtoLL(arr);
 
@@ -52,7 +57,7 @@ public class Deletionat_End {
         Node temp = head2;
         while (temp != null) {
 
-            System.out.print(temp.data+" ");
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
 
