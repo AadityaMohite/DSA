@@ -1,22 +1,23 @@
-class DNode{ 
-    int data; 
-    DNode next; 
-    DNode prev; 
+;
  
-    DNode(int data,DNode next,DNode prev){ 
-        this.data = data; 
-        this.next = next; 
-        this.prev = prev; 
-    } 
- 
-    DNode(int data ){ 
-        this.data = data; 
-        this.next = null; 
-        this.prev = null; 
-    } 
-}; 
- 
-public class DoublyLinkedlist { 
+public class DoublyLinkedlist {
+   static class DNode{
+        int data;
+        DNode next;
+        DNode prev;
+
+        DNode(int data, DNode next, DNode prev){
+            this.data = data;
+            this.next = next;
+            this.prev = prev;
+        }
+
+        DNode(int data ){
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+    }
     public static DNode changearrto_DLL(int arr[]){ 
  
         DNode head = new DNode(arr[0]); 

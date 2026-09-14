@@ -1,17 +1,18 @@
 import java.util.Scanner;
 
-class Node{
-    int data ;
-    Node next;
 
-    
-
-    Node(int data){
-        this.data = data;
-        this.next = null;
-    }
-};
 public class Searchelement {
+  static   class Node{
+        int data ;
+        Node next;
+
+
+
+        Node(int data){
+            this.data = data;
+            this.next = null;
+        }
+    }
 
     public static Node convertarrLL(int[] arr){
         Node head = new Node(arr[0]);

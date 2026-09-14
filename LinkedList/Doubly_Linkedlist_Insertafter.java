@@ -1,25 +1,26 @@
 import java.util.Scanner;
 
-class DNode{
 
-  int data;
-  DNode next;
-  DNode prev;
-
-    DNode(int data , DNode next , DNode prev ){
-           this.data = data;
-           this.next = next;
-           this.prev = prev;        
-    }
-      DNode(int data){
-        this.data = data;
-        this.next = null;
-        this.prev = null;
-      }
-};
 
 
 public class Doubly_Linkedlist_Insertafter {
+   static class DNode{
+
+        int data;
+        DNode next;
+        DNode prev;
+
+        DNode(int data , DNode next , DNode prev ){
+            this.data = data;
+            this.next = next;
+            this.prev = prev;
+        }
+        DNode(int data){
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+    }
     
     public static DNode insert_begin(DNode head,int data){
        

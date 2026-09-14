@@ -1,20 +1,21 @@
 import java.util.Scanner;
-class Node{
 
-    int data ;
-    Node next ;
-
-    Node(int data , Node next){
-      this.data = data ;
-      this.next = next;
-    }
-
-    Node(int data){
-        this.data = data;
-    }
-};
 
 public class Insertafter_Node {
+   static class Node{
+
+        int data ;
+        Node next ;
+
+        Node(int data , Node next){
+            this.data = data ;
+            this.next = next;
+        }
+
+        Node(int data){
+            this.data = data;
+        }
+    }
      public static Node convertarrLL(int arr[]){
 
         Node head = new Node (arr[0]);
