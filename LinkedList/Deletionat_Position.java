@@ -50,16 +50,17 @@ public class Deletionat_Position {
             return null;
         }
 
-        if(pos==0){
+        if(pos==1){
             head = head.next;
             return  head;
         }
         Node temp = head ;
         
-        for(int i = 0; i<pos-1; i++){
+        for(int i = 1; i<pos-1; i++){
           
           temp = temp.next;
         }
+
 
         temp.next = temp.next.next;
 
