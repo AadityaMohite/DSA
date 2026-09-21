@@ -61,6 +61,7 @@ public class InsertionatBeg_CLL {
             temp = temp.next;
         }
 
+
         System.out.print(temp.data);
 
 
