@@ -1,53 +1,4 @@
 import java.util.Scanner;
-class stackImplementation{
-    int arr[];
-    int size;
-    int top = -1;
-
-
-    stackImplementation(int size){
-        this.size = size;
-        arr = new int[size];
-    }
-
-    public void Push(int num){
-        if(top == size-1){
-            System.out.print("Stack is Overflow");
-            return;
-        }
-        else{
-            top++;
-            arr[top] = num;
-        }
-    }
-
-    public int Pop(){
-        if(top == -1){
-            System.out.print("Stack is underflow");
-            return -1;
-        }else{
-            int num = arr[top];
-            top--;
-            return num;
-        }
-    }
-    public int Peek(){
-        if(top == -1){
-            System.out.print("Stack is underflow");
-            return -1;
-        }else{
-            int num = arr[top];
-            return num;
-        }
-    }
-    public void Display(){
-        for(int i= top;i>=0; i--){
-            System.out.println(arr[i]+" ");
-        }
-    }
-}
-
-
 
 
 public class Stack{
@@ -84,5 +35,54 @@ public class Stack{
                   default : System.out.println("Invalid Choice");
               }
          }
+    }
+
+    static class stackImplementation {
+        int arr[];
+        int size;
+        int top = -1;
+
+
+        stackImplementation(int size) {
+            this.size = size;
+            arr = new int[size];
+        }
+
+        public void Push(int num) {
+            if (top == size - 1) {
+                System.out.print("Stack is Overflow");
+                return;
+            } else {
+                top++;
+                arr[top] = num;
+            }
+        }
+
+        public int Pop() {
+            if (top == -1) {
+                System.out.print("Stack is underflow");
+                return -1;
+            } else {
+                int num = arr[top];
+                top--;
+                return num;
+            }
+        }
+
+        public int Peek() {
+            if (top == -1) {
+                System.out.print("Stack is underflow");
+                return -1;
+            } else {
+                int num = arr[top];
+                return num;
+            }
+        }
+
+        public void Display() {
+            for (int i = top; i >= 0; i--) {
+                System.out.println(arr[i] + " ");
+            }
+        }
     }
 }
