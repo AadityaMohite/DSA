@@ -18,9 +18,6 @@ public class Longest_Consecutive {
 
       longest = Math.max(longest,count);
       }
-
-
-
         return longest;
     }
   
