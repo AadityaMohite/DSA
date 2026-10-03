@@ -3,7 +3,7 @@ public class Queue {
 
     int size ;
     int rear = -1;
-    int front = -1;
+    int front = 0;
     int arr[];
 
     Queue(int size ){
@@ -27,19 +27,38 @@ public class Queue {
 
     public int dequeue(){
         int data = -1;
-        if(front == rear ){
+        if(front  > rear ){
             System.out.println("Queue is Empty ");
 
         }else{
-            front++;
+
             data = arr[front];
+            front++;
 
         }
         return data;
     }
 
     public void display(){
+        if(rear < front ){
+            System.out.println("Queue is empty ");
 
+        }else{
+            for(int i = front; i<=rear; i++){
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public int  peek(){
+        if(rear < front){
+            System.out.println("Queue is empty ");
+        }else{
+            int data = arr[front];
+            return data;
+        }
+        return -1;
     }
 
     public static void main(String[]args){
@@ -54,8 +73,20 @@ public class Queue {
 
 
           while(true){
+
+              System.out.println("1. Enqueue");
+              System.out.println("2 . Dequeue");
+              System.out.println("3.  Display ");
+              System.out.println("4 . peek");
+              System.out.println("5 . Exit");
+
+
+
+
               System.out.println("Enter the choice : ");
               int option = sc.nextInt();
+
+
 
               switch(option){
                   case 1 : System.out.println("Enter the data : ");
@@ -69,6 +100,16 @@ public class Queue {
                   break;
 
                   case 3 : q.display();
+                  break;
+
+                  case 4 : int peek = q.peek();
+                           System.out.println("peek element is : "+peek);
+                  break;
+
+                  case 5 : System.out.println("Exit ...");
+                    return;
+
+                  default : System.out.println("Invalid output ");
 
 
               }
